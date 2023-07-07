@@ -1,22 +1,17 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTodaysHotProducts } from "./store/todaysHotProductSlice";
 import { fetchFurnitureProducts } from "./store/furnitureSlice";
-import { fetchSearchProducts } from "./store/searchSlice";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HotDeals from "./components/HotDeals";
+import Search from "./components/Search";
 
 function App() {
     const dispatch = useDispatch();
-    const todaysHotProduct = useSelector(state => state.todaysHot);
     const furniture = useSelector(state => state.furniture);
-    const search = useSelector(state => state.search);
 
     useEffect(() => {
-        dispatch(fetchTodaysHotProducts());
         dispatch(fetchFurnitureProducts());
-        dispatch(fetchSearchProducts());
     }, []);
 
     return (
@@ -24,6 +19,7 @@ function App() {
             <Header />
             <Hero />
             <HotDeals />
+            <Search />
         </div>
     );
 }
