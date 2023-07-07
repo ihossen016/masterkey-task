@@ -15,7 +15,7 @@ const HotDeals = () => {
             <p className="py-3 border-b-2 border-dashed border-[#FFAE5D] text-2xl font-bold">
                 Today's hot deals for you
             </p>
-            <div className="grid grid-cols-5 gap-4 pt-8 gap-4">
+            <div className="grid grid-cols-5 gap-4 pt-8">
                 {!todaysHotProduct.loading &&
                     todaysHotProduct.products.map(item => (
                         <div className="grid grid-cols-1" key={item._id}>
