@@ -4,6 +4,7 @@ import { fetchTodaysHotProducts } from "./store/todaysHotProductSlice";
 import { fetchHotProducts } from "./store/hotProductSlice";
 import { fetchFurnitureProducts } from "./store/furnitureSlice";
 import { fetchSearchProducts } from "./store/searchSlice";
+import Header from "./components/Header";
 
 function App() {
     const dispatch = useDispatch();
@@ -20,9 +21,9 @@ function App() {
     }, []);
 
     return (
-        <>
-            <h1>test</h1>
-        </>
+        <div className="w-11/12 mx-auto border-red-700">
+            <Header />
+        </div>
     );
 }
 
