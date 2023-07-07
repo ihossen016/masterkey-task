@@ -5,6 +5,7 @@ import { fetchFurnitureProducts } from "./store/furnitureSlice";
 import { fetchSearchProducts } from "./store/searchSlice";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import HotDeals from "./components/HotDeals";
 
 function App() {
     const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
         <div className="w-11/12 mx-auto border-red-700">
             <Header />
             <Hero />
+            <HotDeals />
         </div>
     );
 }
